@@ -33,4 +33,8 @@ public class Solution {
                 integerList.stream().filter(number -> number % 2 != 0).mapToInt(Integer::intValue).sum() :
                 integerList.stream().filter(number -> number % 2 == 0).mapToInt(Integer::intValue).sum();
     }
+
+    public List<String> removeDuplicates(List<String> stringList) {
+        return stringList.stream().distinct().collect(Collectors.toList());
+    }
 }
