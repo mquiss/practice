@@ -11,6 +11,6 @@ public class SearchByISBN extends BookSearchImpl {
 
     @Override
     public boolean compare(Book book) {
-        return book.getISBN().toLowerCase().compareTo(ISBN.toLowerCase()) == 0;
+        return book.getISBN().equalsIgnoreCase(ISBN);
     }
 }

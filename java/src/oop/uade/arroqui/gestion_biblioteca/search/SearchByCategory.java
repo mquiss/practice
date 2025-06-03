@@ -11,6 +11,6 @@ public class SearchByCategory extends BookSearchImpl {
 
     @Override
     public boolean compare(Book book) {
-        return book.getCategory().toLowerCase().compareTo(category.toLowerCase()) == 0;
+        return book.getCategory().equalsIgnoreCase(category);
     }
 }

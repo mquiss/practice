@@ -11,6 +11,6 @@ public class SearchByAuthor extends BookSearchImpl{
 
     @Override
     public boolean compare(Book book) {
-        return book.getAuthor().toLowerCase().compareTo(author.toLowerCase()) == 0;
-    } // no podria hacerlo con book.getAuthor.equalsIgnoreCase(author) ?
+        return book.getAuthor().equalsIgnoreCase(author);
+    }
 }
