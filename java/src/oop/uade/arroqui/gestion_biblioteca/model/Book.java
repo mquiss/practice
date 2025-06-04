@@ -6,6 +6,7 @@ public class Book {
     private String author;
     private int publishYear;
     private String category;
+    private boolean isAvailable;
 
     public Book(String ISBN, String title, String author, int publishYear, String category) {
         this.ISBN = ISBN;
@@ -13,6 +14,7 @@ public class Book {
         this.author = author;
         this.publishYear = publishYear;
         this.category = category;
+        this.isAvailable = true;
     }
 
     public String getISBN() {
@@ -49,6 +51,14 @@ public class Book {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
     }
 
     @Override
